@@ -149,7 +149,6 @@
 
         .webinar__button {
             border-radius: 100px;
-            max-width: 346px;
             background: linear-gradient(90deg, #EB3C3A 0%, #FF5A58 63.46%, #EB3C3A 100%);
             box-shadow: 0px 5px 0px 0px #890101;
             color: white;
@@ -162,6 +161,7 @@
             margin-top: -30px;
             cursor: pointer;
             font-weight: 800;
+            text-decoration: none;
             font-size: 22px;
             line-height: 20px;
             letter-spacing: 5%;
@@ -395,6 +395,7 @@
             .webinar__benefit {
                 gap: 0px
             }
+
             .webinar__products-description {
                 padding: 16px 10px;
                 font-size: 15px;
@@ -485,8 +486,9 @@
             </div>
             <img class="webinar__speaker" src="./images/speaker.avif" loading="lazy" decoding="async" width="258"
                 height="298" alt="speaker">
-            <button class="webinar__button registerBtn">BEPUL QATNASHISH</button>
-
+            <a class="webinar__button registerBtn" style="margin-bottom: 30px;" href="https://t.me/+utzcUWfzJ21kM2Qy">
+                BEPUL QATNASHISH
+            </a>
             <div class="webinar__countdown">
                 <div class="webinar__countdown-content">
                     <p class="webinar__countdown-label">Ro’yxatdan o’tish uchun qolgan vaqt:</p>
@@ -526,27 +528,39 @@
                 </ul>
 
 
-                <button class="webinar__button registerBtn">BEPUL QATNASHISH</button>
+                <a style="max-width: 346px !important; width: 100%; "
+                    href="https://t.me/+utzcUWfzJ21kM2Qy">
+
+                    <button class="webinar__button registerBtn"
+                        style="margin-bottom: 30px; ">
+                        BEPUL QATNASHISH
+                    </button>
+
+                </a>
             </div>
 
             <div class="webinar__products">
                 <img class="webinar__logo" src="./images/logo.avif" loading="lazy" decoding="async" width="210"
                     height="31" alt="logo">
 
-                      <!-- <div class="webiner___images-box">
+                <!-- <div class="webiner___images-box">
                     <img class="webinar__product-image" src="./images/borche1.avif" loading="lazy" decoding="async"
                         width="349" height="219" alt="borche">
                     <img class="webinar__product-image" src="./images/borche2.avif" loading="lazy" decoding="async"
                         width="349" height="219" alt="borche">
                 </div> -->
 
-                <p class="webinar__products-description" style="margin-bottom: 10px;">Qiymati 15.000$+ bo'lgan bonus <br> va sovg'alar yutib olish imkoniyati</p>
+                <p class="webinar__products-description" style="margin-bottom: 10px;">Qiymati 15.000$+ bo'lgan bonus
+                    <br> va sovg'alar yutib olish imkoniyati
+                </p>
                 <p class="webinar__products-description">Tadbirkorlar uchun tayyorlangan <br> barcha takliflar va
                     bonuslarni onlayn <br> taqdimotimizda
                     bilib oling!</p>
             </div>
 
-            <button class="webinar__button registerBtn" style="margin-bottom: 30px;">BEPUL QATNASHISH</button>
+            <a class="webinar__button registerBtn" style="margin-bottom: 30px;" href="https://t.me/+utzcUWfzJ21kM2Qy">
+                BEPUL QATNASHISH
+            </a>
 
             <div class="webinar__benefits">
                 <svg width="10" height="30" viewBox="0 0 10 30" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -574,73 +588,6 @@
         </section>
     </main>
 
-    <!-- Modal -->
-    <div id="registrationModal" class="homeModal" style="display: none">
-        <div class="homeModalOverlay"></div>
-        <div class="homeFormContainer">
-            <button class="closeButton" id="closeModalBtn">
-                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 12 12" fill="none">
-                    <path d="M1 11L11 1M1 1.00001L11 11" stroke="currentColor" stroke-width="1.5"
-                        stroke-linecap="round" />
-                </svg>
-            </button>
-            <div class="homeFormTop">
-                <h1 class="homeFormTopTitle">
-                    Ro'yxatdan o'tish uchun ma'lumotlaringizni kiriting!
-                </h1>
-            </div>
-            <form id="registrationForm" name="contact-form">
-                <!-- ISM -->
-                <div class="HomeFormRow">
-                    <label class="HomeFormRowLabel" for="name">Ismingiz:</label>
-                    <input class="HomeFormRowInput" type="text" id="name" name="name" placeholder="Ismingizni kiriting"
-                        autocomplete="name" />
-                    <p class="homeFormErrorText" id="nameError" style="display: none">
-                        ❌ Ismingizni kiriting!
-                    </p>
-                </div>
-
-                <!-- TELEFON -->
-                <div class="HomeFormRow">
-                    <label class="HomeFormRowLabel" for="phone">Telefon raqamingiz:</label>
-
-                    <div class="phone-input-container">
-                        <!-- LEFT: country -->
-                        <button type="button" class="selected-country" id="selectedCountry">
-                            <span class="selected-flag" id="selectedCountryFlag">🇺🇿</span>
-
-                            <svg id="dropdownIcon" xmlns="http://www.w3.org/2000/svg" width="16" height="16"
-                                viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                                stroke-linecap="round" stroke-linejoin="round">
-                                <polyline points="6 9 12 15 18 9"></polyline>
-                            </svg>
-                            <span class="selected-code" id="selectedCountryCodeText">+998</span>
-                        </button>
-
-                        <!-- dropdown -->
-                        <div class="country-dropdown" id="countryDropdown" style="display:none"></div>
-
-                        <!-- RIGHT: phone input (number span inside) -->
-                        <div class="phone-field">
-                            <input class="HomeFormRowInput phone-input" type="tel" id="phone" name="phone"
-                                inputmode="numeric" placeholder="00 0000 00 00" autocomplete="tel"
-                                style="border: none; background-color: transparent;padding-left: 5px;" />
-                        </div>
-                    </div>
-
-                    <p class="homeFormErrorText" id="phoneError" style="display:none">
-                        ❌ Telefon raqam mos emas!
-                    </p>
-                </div>
-
-
-                <button type="submit" class="HomeFormBtn" id="submitBtn">
-                    DAVOM ETISH
-                </button>
-            </form>
-
-        </div>
-    </div>
 
     <script defer src="./js/phoneFormatter.js"></script>
     <script defer src="./js/app.js"></script>
